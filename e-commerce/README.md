@@ -1,118 +1,60 @@
-## Lesson-24
+<h1 align=center>CRWN Clothing</h1>
 
-In this section, we are going to introduce our stripe integration and create a stripe button to help us leverage the stripe checkout library. Stripe is an excellent service that allows us to massively simplify our checkout flow, which would otherwise be incredibly complicated.
+<p align=center>
+An on going ecommerce project from the <a href='https://www.udemy.com/complete-react-developer-zero-to-mastery/'>Complete React Developer in 2020</a> course
+</p>
 
-# How to fork and clone
+> **⚒ This is a fully functional ecommerce Web Application including authentication and payment. The goal of this project is to learn and practice technologies in the React ecosystem**
 
-One quick note about cloning this project. If you wish to make commits and push the code up after cloning this repo, you should fork the project first. In order to own your own copy of this repository, you have to fork it so you get your own copy on your own profile!
+[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)  
 
-You can see the fork button in the top right corner of every GitHub project; click it and a copy of the project will be added to your GitHub profile under the same name as the original project.
+See it live: [https://e-commerce-nine.vercel.app/](https://jwl-clothing.herokuapp.com/)
 
-![alt text](https://i.ibb.co/1YN7SJ6/Screen-Shot-2019-07-01-at-2-02-40-AM.png "image to fork button")
+🏗  Build using:
 
-After forking the project, simply clone it the way you would from the new forked project in your own GitHub repository and you can commit and push to it freely!
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/) - a popular user interface JavaScript library
+- [Redux](https://redux.js.org/) - centralize and manage the state of JavaScript apps
+- [React Router](https://reacttraining.com/react-router/) - helps to navigate through React components
+- [reselect](https://github.com/reduxjs/reselect#motivation-for-memoized-selectors) - a "selector" library for Redux, to avoid recalculations of states by using memoized selectors
+- [redux persist](https://github.com/rt2zz/redux-persist) - manage to persist redux store in storage
+- [react-stripe-checkout](https://www.npmjs.com/package/react-stripe-checkout) - a React component the wraps Stripe checkout JavaScript for a better React integration
+- [styled-components](https://www.styled-components.com/) - CSS in JS concept, allow developers style their components by using JavaScript
+- [redux-thunk](https://www.npmjs.com/package/redux-thunk) - Redux Thunk middleware allows you to write action creators that return a function instead of an action
+- [redux-saga](https://redux-saga.js.org/) - a library that aims to make application side effects(i.e. asynchronous things like data fetching and impure things like accessing the browser cache) easiter to manage
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html) - Enable function component to use state and other React features
+- [React.lazy](https://reactjs.org/docs/code-splitting.html) - split React component into different chunks, then lazy load them
+- [React.memo](https://reactjs.org/docs/react-api.html#reactmemo) - If your function component renders the same result given the same props, you can wrap it in a call to React.memo for a performance boost in some cases by memoizing the result
 
+💈 Third Party Services
 
-# After you fork and clone:
+- [firebase](https://firebase.google.com/) - thirdparty service provider for authentication and datastorage
+- [Stripe](https://stripe.com/) - online payment service platform
 
-## Install dependencies
+🖥 Backend
+- [NodeJS](https://nodejs.org/en/) - Server side JavaScript
+- [express](https://expressjs.com/) - Web framework for Node.js
 
-In your terminal after you clone your project down, remember to run either `yarn` or `npm install` to build all the dependencies in the project.
+☁  Hosted on Heroku
+- [Steps to host the app](https://github.com/jwlbjtu/crwn-clothing/blob/master/Heroku.md)
 
-## Set your firebase config
+## Quick Start
 
-Remember to replace the `config` variable in your `firebase.utils.js` with your own config object from the firebase dashboard! Navigate to the project settings and scroll down to the config code. Copy the object in the code and replace the variable in your cloned code.
+Clone the repo using Git:
 
-![alt text](https://i.ibb.co/6ywMkBf/Screen-Shot-2019-07-01-at-11-35-02-AM.png "image to firebase config")
-
-
-## Set your stripe publishable key 
-
-Set the `publishableKey` variable in the `stripe-button.component.jsx` with your own publishable key from the stripe dashboard.
-
-![alt text](https://i.ibb.co/djQTmVF/Screen-Shot-2019-07-01-at-2-18-50-AM.png "image to publishable key")
-
-## Things to set before you deploy
-
-You will also need to connect your existing Heroku app to this new forked and cloned repo, or you have to create a new Heroku app and push to it. A quick refresher on how to do either of these:
-
-## Set to an existing Heroku app
-
-To set to an existing Heroku app you already have deployed, you need to know the name of the app you want to deploy to. To see a list of all the apps you currently have on Heroku:
-
-```
-heroku apps
-```
-
-Copy the name of the app you want to connect the project to, then run:
-
-```
-heroku git:remote -a <PASTE_YOUR_APP_NAME_HERE>
+```bash
+git clone https://github.com/jwlbjtu/crwn-clothing.git
 ```
 
-And now you'll have your repo connected to the heroku app under the git remote name `heroku`.
+Install the dependencies and start the app:
 
-Then skip to the bottom of this article to see what to do next!
-
-
-## To create a new Heroku app
-
-Create a new Heroku project by typing in your terminal:
-
-```
-heroku create
+```bash
+npm install && npm start
 ```
 
-This will create a new Heroku project for you. Then run:
+Code on! ⌨ 
 
-```
-git remote -v
-```
-
-You should see heroku `https://git.heroku.com/<RANDOMLY_GENERATED_NAME_OF_YOUR_APP>` in the list. This means you have successfully connected your project to the newly created Heroku app under the git remote of `heroku`.
-
-
-## Deploying to Heroku
-
-Add the `mars/create-react-app-buildpack` to your heroku project by typing:
-
-```
-heroku buildpacks:set mars/create-react-app-buildpack
-```
-
-You can then deploy to heroku by running:
-
-```
-git push heroku master
-```
-
-You will see this warning message if you are pushing to an existing app:
-
-```
-! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'https://git.heroku.com/hasura-crwn-clothing.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-```
-
-This is because we are pushing to an existing app that was deploying an entirely different repository from what we have now. Simply run:
-
-```
-git push heroku master --force
-```
-
-This will overwrite the existing Heroku app with our new code.
-
-
-## Open our Heroku project
-
-After heroku finishes building our project, we can simply run:
-
-```
-heroku open
-```
-
-This will open up our browser and take us to our newly deployed Heroku project!
+## 📜  TODO
+* Add TravisCI to build the project
+* Try out Docker and K8s on this project
+* Automate the deploy steps
