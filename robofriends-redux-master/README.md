@@ -1,6 +1,6 @@
 # Robofriends - React + Redux
 
-You can try this app here!: https://robofriends-redux-master.vercel.app/
+You can try this app here!: https://robofriends-redux.vercel.app/
 
 ![alt robo](https://github.com/taroserigano/Complete-React-Redux-Development/blob/master/Pictures/robo-redux.png)
 
