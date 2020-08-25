@@ -1,5 +1,5 @@
 # Robofriends App
-You can try this app here!: ![alt robo](https://github.com/taroserigano/Complete-React-Redux-Development/blob/master/Pictures/robo-redux.png)
+You can try this app here!: ![alt robo](https://robofriends-master.vercel.app/)
 
 
 ## Available Scripts
