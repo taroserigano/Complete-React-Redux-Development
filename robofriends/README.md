@@ -1,7 +1,6 @@
 # Robofriends App
 You can try this app here!: ![alt robo](https://robofriends-master.vercel.app/)
 
-
 ## Available Scripts
 
 In the project directory, you can run:
