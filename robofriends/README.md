@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Robofriends App
+You can try this app here!: ![alt robo](https://github.com/taroserigano/Complete-React-Redux-Development/blob/master/Pictures/robo-redux.png)
+
 
 ## Available Scripts
 
