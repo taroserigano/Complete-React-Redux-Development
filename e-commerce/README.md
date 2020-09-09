@@ -37,15 +37,15 @@ See it live: [https://e-commerce-nine.vercel.app/](https://jwl-clothing.herokuap
 - [NodeJS](https://nodejs.org/en/) - Server side JavaScript
 - [express](https://expressjs.com/) - Web framework for Node.js
 
-☁  Hosted on Heroku
-- [Steps to host the app](https://github.com/jwlbjtu/crwn-clothing/blob/master/Heroku.md)
+☁  Hosted on Vercel
+- [Steps to host the app]([https://e-commerce-nine.vercel.app/])
 
 ## Quick Start
 
 Clone the repo using Git:
 
 ```bash
-git clone https://github.com/jwlbjtu/crwn-clothing.git
+git clone https://github.com/taroserigano/e-commerce.git
 ```
 
 Install the dependencies and start the app:
