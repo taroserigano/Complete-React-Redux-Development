@@ -1,5 +1,7 @@
 <h1 align=center>CRWN Clothing</h1>
 
+![alt e-commerce](https://github.com/taroserigano/Complete-React-Redux-Development/blob/master/Pictures/e-coomerce.jpg)
+
 <p align=center>
 An on going ecommerce project from the <a href='https://www.udemy.com/complete-react-developer-zero-to-mastery/'>Complete React Developer in 2020</a> course
 </p>
