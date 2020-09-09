@@ -1,4 +1,4 @@
-<h1 align=center>CRWN Clothing</h1>
+<h1 align=center>CRWN Clothing (React + Redux - Stripe)</h1>
 
 ![alt e-commerce](https://github.com/taroserigano/Complete-React-Redux-Development/blob/master/Pictures/e-coomerce.jpg)
 
